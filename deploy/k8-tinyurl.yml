@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: k8-tinyurl
+  name: k8-tinyurl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: k8-tinyurl
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: k8-tinyurl
+    spec:
+      containers:
+      - image: tinyurl:latest
+        name: k8-tinyurl
+        imagePullPolicy: IfNotPresent
+        resources: {}
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: k8-tinyurl
+  name: k8-tinyurl
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    run: k8-tinyurl
+  type: NodePort
+status:
+  loadBalancer: {}
