@@ -8,7 +8,7 @@ var config = {
         port: '3010'
     },
     default: {
-        database: 'mongodb://127.0.0.1:27017/tinyurl',
+        database: 'mongodb://mongo:27017/tinyurl',
         port: '3000'
     }
 }
