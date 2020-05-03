@@ -1,5 +1,5 @@
 build:
-	docker build -t tinyurl:latest .
+	docker build -t tinyurl:latest -t tinyurl:1.16.0 .
 
 build_base:
 	docker build -t tinyurl_base:latest -f deploy/base/Dockerfile .
