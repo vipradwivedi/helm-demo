@@ -12,7 +12,7 @@
         "crypto-js": "^3.1.9-1",
         "debug": "~2.6.3",
         "ejs": "^2.5.7",
-        "express": "^4.18.2",
+        "express": "^4.19.2",
         "jade": "~1.11.0",
         "mongoose": "^5.7.5",
         "mongoose-auto-increment": "^5.0.1",
